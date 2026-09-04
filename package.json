@@ -36,6 +36,7 @@
     "dev": "vp pack --watch",
     "test": "vp test",
     "check": "vp check",
+    "release": "bumpp --no-publish && pnpm publish",
     "prepublishOnly": "vp run build",
     "prepare": "vp config"
   },
