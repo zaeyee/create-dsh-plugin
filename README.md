@@ -1,8 +1,8 @@
-# create-dsh
+# create-dsh-plugin
 
 > Scaffolding generator for DeepSeek Harness (DSH) plugins — pick the capabilities you need, get a strict-typed, build-ready project.
 
-[![npm: create-dsh](https://img.shields.io/npm/v/create-dsh.svg)](https://www.npmjs.com/package/create-dsh)
+[![npm: @zaeyee/create-dsh-plugin](https://img.shields.io/npm/v/@zaeyee/create-dsh-plugin.svg)](https://www.npmjs.com/package/@zaeyee/create-dsh-plugin)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 [![Node: ≥22.18](https://img.shields.io/badge/node-%E2%89%A522.18-green.svg)](#requirements)
 
@@ -26,15 +26,15 @@ English | [中文](README.zh.md)
 
 ```sh
 # Non-interactive (CI friendly): minimal installable host plugin
-npm create dsh@latest my-plugin -- --name dsh-my-plugin
+npm create @zaeyee/dsh-plugin@latest my-plugin -- --name dsh-my-plugin
 
 # Compose capabilities as needed
-npm create dsh@latest my-plugin -- --name dsh-my-plugin \
+npm create @zaeyee/dsh-plugin@latest my-plugin -- --name dsh-my-plugin \
   --with config,commands,tool,events,service,hook,client \
   --ui all
 
 # Interactive mode: omit --name
-npm create dsh@latest
+npm create @zaeyee/dsh-plugin@latest
 ```
 
 Then:

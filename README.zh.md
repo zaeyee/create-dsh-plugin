@@ -1,8 +1,8 @@
-# create-dsh
+# create-dsh-plugin
 
 > DeepSeek Harness（DSH）插件脚手架生成器——按需选择能力，产出严格类型、开箱可构建的插件项目。
 
-[![npm: create-dsh](https://img.shields.io/npm/v/create-dsh.svg)](https://www.npmjs.com/package/create-dsh)
+[![npm: @zaeyee/create-dsh-plugin](https://img.shields.io/npm/v/@zaeyee/create-dsh-plugin.svg)](https://www.npmjs.com/package/@zaeyee/create-dsh-plugin)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 [![Node: ≥22.18](https://img.shields.io/badge/node-%E2%89%A522.18-green.svg)](#环境要求)
 
@@ -26,15 +26,15 @@
 
 ```sh
 # 非交互（CI 友好）：生成最小可安装的宿主插件
-npm create dsh@latest my-plugin -- --name dsh-my-plugin
+npm create @zaeyee/dsh-plugin@latest my-plugin -- --name dsh-my-plugin
 
 # 按需组合能力
-npm create dsh@latest my-plugin -- --name dsh-my-plugin \
+npm create @zaeyee/dsh-plugin@latest my-plugin -- --name dsh-my-plugin \
   --with config,commands,tool,events,service,hook,client \
   --ui all
 
 # 交互模式：不带 --name
-npm create dsh@latest
+npm create @zaeyee/dsh-plugin@latest
 ```
 
 然后：

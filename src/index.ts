@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * create-dsh — generate a small, installable DSH plugin from selected
+ * @zaeyee/create-dsh-plugin — generate a small, installable DSH plugin from selected
  * shapes: template fragment overlay + JSON deep merge + `.data.mjs` EJS data
  * chaining.
  *
@@ -47,7 +47,7 @@ const UIS = [...UI_SURFACES, 'all'] as const
 const STYLES = ['native', 'modules'] as const
 
 const USAGE = `usage: create-dsh <target> --name <npm-package-name> [--with config,commands,tool,events,service,hook,client] [--ui <surface>[,<surface>...]|all] [--style native|modules]
-       npm create dsh <target> -- --name <npm-package-name> [--with ...] [--ui ...] [--style ...]
+       npm create @zaeyee/dsh-plugin <target> -- --name <npm-package-name> [--with ...] [--ui ...] [--style ...]
 
 UI surfaces: ${UI_SURFACES.join(', ')}
 --ui all selects every surface. config-card implies the config shape;
@@ -141,7 +141,7 @@ async function init(): Promise<void> {
     uiSelected = (argv.ui ?? '').split(',').filter(Boolean)
     styleMode = argv.style ?? 'native'
   } else {
-    intro('create-dsh')
+    intro('@zaeyee/create-dsh-plugin')
 
     const suggested = toValidName(targetArg ?? 'dsh-my-plugin')
     name = (

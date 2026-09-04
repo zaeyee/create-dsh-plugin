@@ -1,5 +1,5 @@
 {
-  "name": "create-dsh",
+  "name": "@zaeyee/create-dsh-plugin",
   "version": "0.1.0",
   "description": "Generator-first scaffolding for DeepSeek Harness plugins (template overlay architecture)",
   "homepage": "https://github.com/zaeyee/create-dsh#readme",
