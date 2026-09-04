@@ -1,6 +1,6 @@
 {
   "name": "@zaeyee/create-dsh-plugin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Generator-first scaffolding for DeepSeek Harness plugins (template overlay architecture)",
   "keywords": [
     "cli",
