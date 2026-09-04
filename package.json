@@ -12,15 +12,15 @@
     "plugin",
     "scaffolding"
   ],
-  "homepage": "https://github.com/zaeyee/create-dsh#readme",
+  "homepage": "https://github.com/zaeyee/create-dsh-plugin#readme",
   "bugs": {
-    "url": "https://github.com/zaeyee/create-dsh/issues"
+    "url": "https://github.com/zaeyee/create-dsh-plugin/issues"
   },
   "license": "MIT",
   "author": "zaeyee <zaeyee@163.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zaeyee/create-dsh.git"
+    "url": "git+https://github.com/zaeyee/create-dsh-plugin.git"
   },
   "bin": {
     "create-dsh-plugin": "./dist/index.mjs"
