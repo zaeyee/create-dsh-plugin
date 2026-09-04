@@ -2,6 +2,16 @@
   "name": "@zaeyee/create-dsh-plugin",
   "version": "0.1.0",
   "description": "Generator-first scaffolding for DeepSeek Harness plugins (template overlay architecture)",
+  "keywords": [
+    "cli",
+    "cordis",
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "generator",
+    "plugin",
+    "scaffolding"
+  ],
   "homepage": "https://github.com/zaeyee/create-dsh#readme",
   "bugs": {
     "url": "https://github.com/zaeyee/create-dsh/issues"
@@ -13,7 +23,7 @@
     "url": "git+https://github.com/zaeyee/create-dsh.git"
   },
   "bin": {
-    "create-dsh": "./dist/index.mjs"
+    "create-dsh-plugin": "./dist/index.mjs"
   },
   "files": [
     "dist",
