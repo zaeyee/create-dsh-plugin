@@ -1,0 +1,8 @@
+{
+  "exports": {
+    "./service": {
+      "types": "./lib/service.d.ts",
+      "default": "./lib/service.js"
+    }
+  }
+}

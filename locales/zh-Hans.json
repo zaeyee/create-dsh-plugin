@@ -1,0 +1,57 @@
+{
+  "pluginName": {
+    "message": "插件 npm 包名：",
+    "invalid": "包名需形如 'dsh-my-plugin' 或 '@scope/dsh-my-plugin'（小写字母、数字与短横线）。"
+  },
+  "overwrite": {
+    "message": "目标目录非空。删除现有内容并继续？"
+  },
+  "shapes": {
+    "message": "选择要包含的演示形状：",
+    "hint": "(留空 = 仅最小 hello 插件)",
+    "options": {
+      "config": "config — Schemastery Config + 实时 settings 命名空间（GUI 可改）",
+      "commands": "commands — /hello 与 /dsh-demo 斜杠命令（可选子插件）",
+      "tool": "tool — 带类型与 presentResult 渲染的 greet 模型工具",
+      "events": "events — 带类型的 <plugin>/ready Cordis 事件",
+      "service": "service — 可单独挂载的 GreetingService 半插件",
+      "hook": "hook — tools/pre-execute 权限门（denyTools 配置）",
+      "client": "client — 使用 DSH ModuleLoader 信封的浏览器半插件"
+    }
+  },
+  "ui": {
+    "message": "选择 UI 表面：",
+    "hint": "(留空 = 不选；config-card 联动 config，commandview 联动 commands)",
+    "options": {
+      "shell-overlay": "shell.overlay — 框架级浮动 pill（强类型的增量表面）",
+      "config-card": "config-card — settings.plugin.item 配置卡片，编辑配置命名空间",
+      "sidebar-action": "sidebar-action — sidebar.footer.action 侧栏底部按钮",
+      "input-dock": "input-dock — conversation.input.dock 输入区上方状态条",
+      "header-utilities": "header-utilities — conversation.session.header.utilities 会话头工具徽标",
+      "input-left": "input-left — conversation.input.left 工具行左端控件",
+      "input-right": "input-right — conversation.input.right 工具行右端控件",
+      "commandview": "commandview — conversation.chat.commandview 自定义 /dsh-demo 渲染行",
+      "general-item": "general-item — settings.general.item 通用设置偏好行",
+      "plugins-tab": "plugins-tab — settings.plugins.tab 插件页新标签页",
+      "settings-action": "settings-action — settings.action 设置面板头部操作按钮",
+      "header-actions": "header-actions — conversation.session.header.actions 会话头操作按钮",
+      "composer-dock": "composer-dock — conversation.composer.dock 输入卡下方状态条",
+      "assistant-actions": "assistant-actions — conversation.chat.assistant-actions 每条 AI 消息操作按钮"
+    }
+  },
+  "style": {
+    "message": "选择 CSS 编写方式：",
+    "hint": "（普通 .css 始终按所写原样注入）",
+    "options": {
+      "native": "native — 全局 styles.css，类名即所写即所用（零新增依赖）",
+      "modules": "modules — native 基础上支持 *.module.css（lightningcss hash 作用域类）"
+    }
+  },
+  "errors": {
+    "cancelled": "操作已取消。"
+  },
+  "infos": {
+    "scaffolding": "正在生成插件至",
+    "done": "插件生成完毕。"
+  }
+}

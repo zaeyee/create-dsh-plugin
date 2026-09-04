@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "types": [
+      "node",
+      "react",
+      "react-dom/client"
+    ]
+  },
+  "include": [
+    "types.d.ts"
+  ]
+}

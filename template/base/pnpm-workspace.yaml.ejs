@@ -1,0 +1,14 @@
+<% if (styleMode === 'modules') { %>allowBuilds:
+  lightningcss: true
+<% } -%>catalog:
+  vite: npm:@voidzero-dev/vite-plus-core@0.2.9
+  vite-plus: 0.2.9
+minimumReleaseAgeExclude:
+<% for (const entry of excludeEntries) { %>  - <%- entry %>
+<% } -%>overrides:
+  vite: 'catalog:'
+peerDependencyRules:
+  allowAny:
+    - vite
+  allowedVersions:
+    vite: '*'

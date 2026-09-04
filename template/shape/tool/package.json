@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "@deepseek-ai/dsh-tools": "^0.1.0-rc.8"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": "^0.1.0-rc.8"
+  }
+}

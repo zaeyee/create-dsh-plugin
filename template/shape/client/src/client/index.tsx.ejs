@@ -1,0 +1,33 @@
+/**
+ * Client half entry: assemble the selected UI surfaces and export the
+ * inject / apply the cordis loader needs. Each surface is its own module
+ * register functions run in order inside apply.
+ *
+ * Registration options carry `locale: NAMESPACE`, which puts the framework-
+ * synthesized typed `t` seat on every surface component's props; the zh/en
+ * dictionaries live in locales/ (contract in locales.ts). styles.css is
+ * side-effect imported here and injected at build time by the CSS plugin
+ * (see vite.config.ts); class names are plain globals.
+ */
+<% for (const line of clientImports) { %><%- line %>
+<% } %>
+declare module '@deepseek-ai/dsh-client-ui-slots' {
+  interface LocaleNamespaceMap {
+    '<%- pluginId %>': keyof typeof dictionaries.zh
+  }
+}
+
+/** All dictionary keys of this namespace (for surface modules' typed t calls). */
+export type LocaleKey = keyof typeof dictionaries.zh
+
+/** Required services: slots (render seats) + locale (typed dictionaries). */
+export const inject = ['slots', 'locale']
+
+/** Client plugin body: register dictionaries, then surfaces in order. */
+export function apply(ctx: ClientContext): void {
+  ctx.effect(() => {
+    const disposers = [ctx.locale.register(NS, 'zh', dictionaries.zh), ctx.locale.register(NS, 'en', dictionaries.en)]
+    return () => disposers.forEach(dispose => dispose())
+  }, '<%- pluginId %>: dictionaries')
+<% for (const line of registers) { %><%- line %>
+<% } %>}

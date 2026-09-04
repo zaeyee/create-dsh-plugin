@@ -1,19 +1,26 @@
 {
-  "name": "create-dsh-plugin",
-  "version": "0.0.0",
-  "description": "A starter for creating a TypeScript package.",
-  "homepage": "https://github.com/author/library#readme",
+  "name": "create-dsh",
+  "version": "0.1.0",
+  "description": "Generator-first scaffolding for DeepSeek Harness plugins (template overlay architecture)",
+  "homepage": "https://github.com/zaeyee/create-dsh#readme",
   "bugs": {
-    "url": "https://github.com/author/library/issues"
+    "url": "https://github.com/zaeyee/create-dsh/issues"
   },
   "license": "MIT",
-  "author": "Author Name <author.name@mail.com>",
+  "author": "zaeyee <zaeyee@163.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/author/library.git"
+    "url": "git+https://github.com/zaeyee/create-dsh.git"
+  },
+  "bin": {
+    "create-dsh": "./dist/index.mjs"
   },
   "files": [
-    "dist"
+    "dist",
+    "template",
+    "locales",
+    "README.md",
+    "README.zh.md"
   ],
   "type": "module",
   "exports": {
@@ -24,6 +31,7 @@
     "access": "public"
   },
   "scripts": {
+    "create": "node src/index.ts",
     "build": "vp pack",
     "dev": "vp pack --watch",
     "test": "vp test",
@@ -32,8 +40,11 @@
     "prepare": "vp config"
   },
   "devDependencies": {
+    "@clack/prompts": "^1.7.0",
     "@types/node": "^26.1.1",
     "bumpp": "^11.1.0",
+    "ejs": "^6.0.1",
+    "picocolors": "^1.1.1",
     "typescript": "^7.0.2",
     "vite": "catalog:",
     "vite-plus": "catalog:"
@@ -44,5 +55,18 @@
       "version": "11.25.0",
       "onFail": "download"
     }
+  },
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "inlinedDependencies": {
+    "@clack/core": "1.4.3",
+    "@clack/prompts": "1.7.0",
+    "ejs": "6.0.1",
+    "fast-string-truncated-width": "3.0.3",
+    "fast-string-width": "3.0.2",
+    "fast-wrap-ansi": "0.2.2",
+    "picocolors": "1.1.1",
+    "sisteransi": "1.0.5"
   }
 }

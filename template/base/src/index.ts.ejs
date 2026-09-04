@@ -1,0 +1,17 @@
+<%# Emit imports in the toolchain formatter's canonical order: type imports
+    first, then value imports by module specifier, relative paths last
+    (alphabetical inside each group) — keeps generated output fmt-clean. -%>
+<% const importSource = line => (line.match(/from '([^']+)'/) ?? [])[1] ?? '' -%>
+<% const importRank = line => (importSource(line).startsWith('.') ? 2 : line.startsWith('import type') ? 0 : 1) -%>
+<%- [...imports].sort((a, b) => importRank(a) - importRank(b) || importSource(a).localeCompare(importSource(b))).join('\n') %>
+
+/** Plugin display name. This root export is mandatory for dsh host loading. */
+export const name = '<%- pluginId %>'
+<% if (needsTool) { %>export const inject = ['tools']
+<% } -%><% if (declares.length) { %><%- declares.join('\n\n') %>
+<% } -%>
+
+/** Default output is a minimal hello plugin; selected shapes append focused demos. */
+export function apply(ctx: Context, <%- needsConfig ? 'config: Config' : '_config: Record<string, never> = {}' %>): void {
+<%- calls.join('\n\n') %>
+}

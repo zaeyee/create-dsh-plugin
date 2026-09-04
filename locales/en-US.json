@@ -1,0 +1,57 @@
+{
+  "pluginName": {
+    "message": "Plugin npm package name:",
+    "invalid": "Name must look like 'dsh-my-plugin' or '@scope/dsh-my-plugin' (lowercase letters, digits and dashes)."
+  },
+  "overwrite": {
+    "message": "Target directory is not empty. Remove existing contents and continue?"
+  },
+  "shapes": {
+    "message": "Select demo shapes to include:",
+    "hint": "(empty = minimal hello plugin)",
+    "options": {
+      "config": "config — Schemastery Config + live settings namespace (GUI-editable)",
+      "commands": "commands — /hello and /dsh-demo slash commands (optional sub-plugin)",
+      "tool": "tool — a typed greet model tool with presentResult rendering",
+      "events": "events — typed <plugin>/ready Cordis event",
+      "service": "service — a separately mountable GreetingService half",
+      "hook": "hook — a tools/pre-execute permission gate (denyTools config)",
+      "client": "client — browser half using the DSH ModuleLoader envelope"
+    }
+  },
+  "ui": {
+    "message": "Select UI surfaces:",
+    "hint": "(empty = none; config-card implies config, commandview implies commands)",
+    "options": {
+      "shell-overlay": "shell.overlay — frame-wide floating pill (the typed additive seat)",
+      "config-card": "config-card — settings.plugin.item card editing the config namespace",
+      "sidebar-action": "sidebar-action — sidebar.footer.action button",
+      "input-dock": "input-dock — conversation.input.dock status strip",
+      "header-utilities": "header-utilities — conversation.session.header.utilities badge",
+      "input-left": "input-left — conversation.input.left tool button",
+      "input-right": "input-right — conversation.input.right tool button",
+      "commandview": "commandview — conversation.chat.commandview custom /dsh-demo row",
+      "general-item": "general-item — settings.general.item preference row",
+      "plugins-tab": "plugins-tab — settings.plugins.tab extra tab",
+      "settings-action": "settings-action — settings.action header button",
+      "header-actions": "header-actions — conversation.session.header.actions button",
+      "composer-dock": "composer-dock — conversation.composer.dock status line",
+      "assistant-actions": "assistant-actions — conversation.chat.assistant-actions per-message button"
+    }
+  },
+  "style": {
+    "message": "Select the CSS authoring setup:",
+    "hint": "(plain .css always injects as written)",
+    "options": {
+      "native": "native — plain global styles.css, class names used exactly as written (zero extra deps)",
+      "modules": "modules — native, plus *.module.css support: hashed scoped classes via lightningcss"
+    }
+  },
+  "errors": {
+    "cancelled": "Operation cancelled."
+  },
+  "infos": {
+    "scaffolding": "Generating plugin at",
+    "done": "Plugin generated."
+  }
+}
